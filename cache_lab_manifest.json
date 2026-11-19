@@ -1,0 +1,75 @@
+
+{
+    "project": "Cache Line and False Sharing Mechanics in Multi-Core Python",
+    "git_username": "belkamenbirgee",
+    "system": {
+        "cpu_model": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+        "architecture": "AMD64",
+        "logical_cores": 8,
+        "selected_cores": [0, 1, 2, 3],
+        "affinity_supported": true,
+        "cache_line_size_bytes": 64,
+        "elements_per_cache_line": 8,
+        "instance_seed": 302388050302263208
+    },
+    "benchmark_configuration": {
+        "threads": 4,
+        "iterations_per_thread": 60000000,
+        "total_intended_updates": 240000000,
+        "tested_strides": [1, 4, 8, 16]
+    },
+    "stride_results": {
+        "1": {
+            "elapsed_ns": 1682800,
+            "ns_per_update": 0.0070116667,
+            "voluntary_context_switches": 6,
+            "involuntary_context_switches": 0,
+            "final_counters": [60000000, 60000000, 60000000, 60000000]
+        },
+        "4": {
+            "elapsed_ns": 1539300,
+            "ns_per_update": 0.00641375,
+            "voluntary_context_switches": 41,
+            "involuntary_context_switches": 0,
+            "final_counters": [60000000, 60000000, 60000000, 60000000]
+        },
+        "8": {
+            "elapsed_ns": 1255600,
+            "ns_per_update": 0.0052316667,
+            "voluntary_context_switches": 21,
+            "involuntary_context_switches": 0,
+            "final_counters": [60000000, 60000000, 60000000, 60000000]
+        },
+        "16": {
+            "elapsed_ns": 1534500,
+            "ns_per_update": 0.00639375,
+            "voluntary_context_switches": 7,
+            "involuntary_context_switches": 0,
+            "final_counters": [60000000, 60000000, 60000000, 60000000]
+        }
+    },
+    "private_baseline": {
+        "elapsed_ns": 117921100,
+        "ns_per_update": 0.4913379167,
+        "voluntary_context_switches": 13,
+        "involuntary_context_switches": 0,
+        "final_counters": [60000000, 60000000, 60000000, 60000000]
+    },
+    "llvm_inspection": {
+        "llvm_ir_length": 12363,
+        "load_instructions_reported": 3,
+        "store_instructions_reported": 1,
+        "branch_instructions_reported": 8,
+        "loop_optimized_away": true,
+        "repeated_memory_updates_verified": false
+    },
+    "verification": {
+        "system_context_passed": true,
+        "memory_alignment_passed": true,
+        "task_2_counter_test_passed": true,
+        "final_counter_checks_passed": true,
+        "llvm_memory_update_verification_passed": false,
+        "benchmark_status": "PRELIMINARY - shared memory loop optimized by LLVM",
+        "verification_passed": false
+    }
+}
