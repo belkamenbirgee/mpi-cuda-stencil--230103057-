@@ -1,0 +1,50 @@
+{
+    "github_username": "belkamenbirgee",
+    "instance_seed": 12709148128169605029,
+    "gpu_uuid": "GPU-beadeb20-0fa1-8ad8-bf3f-4437b48312ea",
+    "mpi_ranks": 4,
+    "global_grid": [
+        512,
+        512
+    ],
+    "local_grid": [
+        256,
+        256
+    ],
+    "steps": 400,
+    "dt": 7.91634496767161e-07,
+    "kappa_max": 0.23999962497115201,
+    "serialized_time_seconds": 8.63466966,
+    "overlapped_time_seconds": 4.470759577999999,
+    "max_final_state_difference": 0.0,
+    "numerical_match_1e_12": true,
+    "ptx_audit": {
+        "shared_loads": 5,
+        "shared_stores": 2,
+        "bar_sync": 1,
+        "has_shared_memory": true,
+        "has_barrier": true
+    },
+    "energy_trace": [
+        [
+            0,
+            0.11813951966886353
+        ],
+        [
+            100,
+            0.11812238084806753
+        ],
+        [
+            200,
+            0.1181133571454282
+        ],
+        [
+            300,
+            0.11810630293688498
+        ],
+        [
+            400,
+            0.1181002474116116
+        ]
+    ]
+}
